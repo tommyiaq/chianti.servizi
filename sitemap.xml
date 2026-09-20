@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sostituisci https://USERNAME.github.io/REPOSITORY/ con l'URL definitivo. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url><loc>https://USERNAME.github.io/REPOSITORY/index.html</loc><priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://USERNAME.github.io/REPOSITORY/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://USERNAME.github.io/REPOSITORY/en/index.html"/>
+  </url>
+  <url><loc>https://USERNAME.github.io/REPOSITORY/chi-siamo.html</loc><priority>0.8</priority></url>
+  <url><loc>https://USERNAME.github.io/REPOSITORY/servizi.html</loc><priority>0.9</priority></url>
+  <url><loc>https://USERNAME.github.io/REPOSITORY/portfolio.html</loc><priority>0.8</priority></url>
+  <url><loc>https://USERNAME.github.io/REPOSITORY/contatti.html</loc><priority>0.7</priority></url>
+
+  <url><loc>https://USERNAME.github.io/REPOSITORY/en/index.html</loc><priority>0.9</priority></url>
+  <url><loc>https://USERNAME.github.io/REPOSITORY/en/about.html</loc><priority>0.7</priority></url>
+  <url><loc>https://USERNAME.github.io/REPOSITORY/en/services.html</loc><priority>0.8</priority></url>
+  <url><loc>https://USERNAME.github.io/REPOSITORY/en/portfolio.html</loc><priority>0.7</priority></url>
+  <url><loc>https://USERNAME.github.io/REPOSITORY/en/contact.html</loc><priority>0.6</priority></url>
+</urlset>

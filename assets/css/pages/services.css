@@ -1,0 +1,71 @@
+/* ============================================================
+   CHIANTI SERVIZI — pages/services.css
+   Stili della pagina Servizi: sezioni per settore, griglia
+   lavorazioni, tabella capacita, FAQ.
+   ============================================================ */
+
+/* ---------- Sezione settore ---------- */
+.sector-block { padding-block: var(--sp-section); }
+.sector-block + .sector-block { border-top: 1px solid var(--c-cream-line); }
+.sector-block--dark { background: var(--c-ink); color: var(--t-on-dark); border-top: 0 !important; }
+.sector-block__head { margin-bottom: var(--sp-5); }
+.sector-block h2 { max-width: 18ch; }
+.sector-gallery { display: grid; gap: var(--sp-2); grid-template-columns: repeat(3, 1fr); margin-top: var(--sp-4); }
+.sector-gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.sector-gallery img:first-child { grid-column: span 2; aspect-ratio: 2 / 1; }
+@media (max-width: 620px) {
+  .sector-gallery { grid-template-columns: repeat(2, 1fr); }
+  .sector-gallery img:first-child { grid-column: span 2; }
+}
+
+/* ---------- Griglia lavorazioni ---------- */
+.ops { display: grid; gap: 1px; grid-template-columns: repeat(3, 1fr); background: var(--c-ink-line); }
+.op {
+  background: var(--c-ink); padding: var(--sp-4);
+  transition: background var(--t-med);
+}
+.op:hover { background: var(--c-ink-soft); }
+.op h3 { font-size: 1rem; margin-bottom: var(--sp-2); }
+.op p { font-size: .92rem; color: var(--t-on-dark-mute); }
+.op .icon-badge { width: 44px; height: 44px; margin-bottom: var(--sp-3); }
+.op .icon-badge svg { width: 18px; height: 18px; }
+@media (max-width: 900px) { .ops { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .ops { grid-template-columns: 1fr; } }
+
+/* ---------- Tabella capacita ---------- */
+.spec-table { width: 100%; font-size: .94rem; }
+.spec-table th, .spec-table td {
+  text-align: left; padding: var(--sp-3) var(--sp-2);
+  border-bottom: 1px solid var(--c-cream-line); vertical-align: top;
+}
+.spec-table th {
+  font-family: var(--f-body); font-weight: 500; font-size: .72rem;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--c-gold-deep);
+  width: 34%; white-space: nowrap;
+}
+.spec-table td { color: var(--t-on-light-mute); }
+@media (max-width: 620px) {
+  .spec-table th, .spec-table td { display: block; width: 100%; }
+  .spec-table th { border-bottom: 0; padding-bottom: .2rem; }
+  .spec-table td { padding-top: 0; }
+}
+
+/* ---------- Processo verticale ---------- */
+.flow { display: grid; gap: var(--sp-4); grid-template-columns: repeat(5, 1fr); }
+.flow__step { position: relative; padding-top: var(--sp-4); }
+.flow__step::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--c-cream-line);
+}
+.flow__step::after {
+  content: ''; position: absolute; top: -4px; left: 0; width: 9px; height: 9px;
+  background: var(--c-gold); transform: rotate(45deg);
+}
+.flow__n { font-family: var(--f-serif); letter-spacing: .28em; font-size: .78rem; color: var(--c-gold-deep); }
+.flow__step h3 { font-size: .98rem; margin: .5rem 0; }
+.flow__step p { font-size: .88rem; color: var(--t-on-light-mute); }
+@media (max-width: 1000px) { .flow { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) { .flow { grid-template-columns: 1fr; } }
+
+/* ---------- FAQ ---------- */
+.faq-wrap { display: grid; gap: clamp(2rem, 1rem + 4vw, 4.5rem); grid-template-columns: .8fr 1.2fr; align-items: start; }
+@media (max-width: 860px) { .faq-wrap { grid-template-columns: 1fr; } }

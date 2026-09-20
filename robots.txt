@@ -1,0 +1,6 @@
+# Chianti Servizi
+# Sostituisci l'URL qui sotto con quello definitivo del sito.
+User-agent: *
+Allow: /
+
+Sitemap: https://USERNAME.github.io/REPOSITORY/sitemap.xml

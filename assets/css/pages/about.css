@@ -1,0 +1,68 @@
+/* ============================================================
+   CHIANTI SERVIZI — pages/about.css
+   Stili della pagina Chi Siamo: storia, valori, territorio.
+   ============================================================ */
+
+/* ---------- Valori ---------- */
+.values { display: grid; gap: 1px; grid-template-columns: repeat(4, 1fr); background: var(--c-cream-line); }
+.value {
+  background: var(--c-cream); padding: var(--sp-4) var(--sp-3);
+  transition: background var(--t-med);
+}
+.value:hover { background: var(--c-cream-soft); }
+.value h3 { font-size: 1rem; margin-bottom: var(--sp-2); }
+.value p { font-size: .92rem; color: var(--t-on-light-mute); }
+@media (max-width: 900px) { .values { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .values { grid-template-columns: 1fr; } }
+
+/* ---------- Timeline storia ---------- */
+.timeline { position: relative; display: grid; gap: var(--sp-5); max-width: 760px; margin-inline: auto; }
+.timeline::before {
+  content: ''; position: absolute; top: 6px; bottom: 6px; left: 7px;
+  width: 1px; background: linear-gradient(180deg, var(--c-gold), transparent 92%);
+  opacity: .6;
+}
+.tl-item { position: relative; padding-left: calc(var(--sp-4) + 14px); }
+.tl-item::before {
+  content: ''; position: absolute; left: 2px; top: 8px;
+  width: 11px; height: 11px; background: var(--c-cream);
+  border: 1px solid var(--c-gold-deep); transform: rotate(45deg);
+}
+.sec--dark .tl-item::before { background: var(--c-ink); }
+.tl-item__year {
+  font-family: var(--f-serif); font-size: .84rem; letter-spacing: .28em;
+  color: var(--c-gold-deep); text-transform: uppercase; display: block; margin-bottom: .4rem;
+}
+.sec--dark .tl-item__year { color: var(--c-gold); }
+.tl-item h3 { font-size: 1.1rem; margin-bottom: .5rem; }
+.tl-item p { color: var(--t-on-light-mute); font-size: .96rem; }
+.sec--dark .tl-item p { color: var(--t-on-dark-mute); }
+
+/* ---------- Territorio ---------- */
+.territory-img { position: relative; }
+.territory-img img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.territory-img figcaption {
+  margin-top: var(--sp-2); font-size: .78rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--t-on-light-mute);
+}
+.sec--dark .territory-img figcaption { color: var(--t-on-dark-mute); }
+
+/* ---------- Coppia di immagini sfalsate ---------- */
+.stack-media { position: relative; display: grid; gap: var(--sp-3); grid-template-columns: repeat(2, 1fr); }
+.stack-media img { width: 100%; object-fit: cover; aspect-ratio: 3 / 4; }
+.stack-media img:first-child { margin-top: clamp(1rem, 4vw, 3.4rem); }
+.stack-media img:last-child { margin-bottom: clamp(1rem, 4vw, 3.4rem); }
+
+/* ---------- Certificazioni ---------- */
+.certs { display: grid; gap: var(--sp-3); grid-template-columns: repeat(3, 1fr); }
+.cert {
+  border: 1px solid var(--c-ink-line); padding: var(--sp-4) var(--sp-3);
+  text-align: center; transition: border-color var(--t-med);
+}
+.cert:hover { border-color: var(--c-gold-deep); }
+.cert strong {
+  display: block; font-family: var(--f-display); font-size: 1.04rem;
+  letter-spacing: .1em; color: var(--c-gold); margin-bottom: .4rem;
+}
+.cert span { font-size: .86rem; color: var(--t-on-dark-mute); }
+@media (max-width: 760px) { .certs { grid-template-columns: 1fr; } }

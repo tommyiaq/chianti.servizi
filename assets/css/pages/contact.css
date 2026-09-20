@@ -1,0 +1,62 @@
+/* ============================================================
+   CHIANTI SERVIZI — pages/contact.css
+   Pagina Contatti: colonne form + recapiti, mappa, orari.
+   ============================================================ */
+
+.contact-grid {
+  display: grid; gap: clamp(2rem, 1rem + 4vw, 4.5rem);
+  grid-template-columns: 1.15fr .85fr; align-items: start;
+}
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Scheda recapiti ---------- */
+.info-card {
+  background: var(--c-ink); color: var(--t-on-dark);
+  padding: clamp(1.5rem, 1rem + 2vw, 2.6rem);
+  position: relative;
+}
+.info-card::before {
+  content: ''; position: absolute; inset: 0 0 auto 0; height: 2px; background: var(--grad-gold);
+}
+.info-card h2 { font-size: 1.32rem; margin-bottom: var(--sp-3); }
+.info-list { display: grid; gap: var(--sp-3); margin-top: var(--sp-4); }
+.info-row { display: flex; gap: var(--sp-3); align-items: flex-start; }
+.info-row__ico {
+  width: 38px; height: 38px; flex-shrink: 0; display: grid; place-items: center;
+  border: 1px solid var(--c-ink-line); color: var(--c-gold);
+}
+.info-row__ico svg { width: 16px; fill: currentColor; }
+.info-row__txt { font-size: .95rem; line-height: 1.7; }
+.info-row__txt strong {
+  display: block; font-size: .68rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--c-gold); margin-bottom: .25rem; font-weight: 500;
+}
+.info-row__txt a { color: var(--t-on-dark); transition: color var(--t-fast); }
+.info-row__txt a:hover { color: var(--c-gold); }
+.info-row__txt span { color: var(--t-on-dark-mute); }
+
+.hours { margin-top: var(--sp-4); padding-top: var(--sp-4); border-top: 1px solid var(--c-ink-line); }
+.hours h3 { font-size: .74rem; letter-spacing: .24em; text-transform: uppercase; color: var(--c-gold); font-family: var(--f-body); font-weight: 500; }
+.hours dl { display: grid; grid-template-columns: auto 1fr; gap: .45rem var(--sp-3); margin-top: var(--sp-3); font-size: .92rem; }
+.hours dt { color: var(--t-on-dark); }
+.hours dd { color: var(--t-on-dark-mute); text-align: right; }
+
+/* ---------- Form ---------- */
+.form-intro { margin-bottom: var(--sp-4); }
+.contact-form { max-width: 640px; }
+
+/* ---------- Mappa ---------- */
+.map-wrap { position: relative; border: 1px solid var(--c-cream-line); background: var(--c-cream-soft); }
+.map-wrap iframe { width: 100%; height: clamp(300px, 42vh, 460px); border: 0; display: block; filter: grayscale(.25) contrast(1.02); }
+.map-actions {
+  display: flex; flex-wrap: wrap; gap: var(--sp-3); align-items: center; justify-content: space-between;
+  padding: var(--sp-3) var(--sp-4); border-top: 1px solid var(--c-cream-line); background: var(--c-cream);
+}
+.map-actions p { font-size: .9rem; color: var(--t-on-light-mute); }
+.map-actions strong { color: var(--t-on-light); font-weight: 500; }
+
+/* ---------- Come raggiungerci ---------- */
+.directions { display: grid; gap: var(--sp-4); grid-template-columns: repeat(3, 1fr); }
+.direction h3 { font-size: .98rem; margin-bottom: var(--sp-2); }
+.direction p { font-size: .92rem; color: var(--t-on-light-mute); }
+@media (max-width: 800px) { .directions { grid-template-columns: 1fr; } }
