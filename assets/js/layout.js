@@ -138,16 +138,18 @@
             '<div class="footer-col">' +
               '<h4>' + t.fContacts + '</h4>' +
               '<ul class="footer-contact">' +
-                '<li>' + ICO.pin + '<span>' + co.street + '<br>' + co.zip + ' ' + co.city +
-                  ' (' + co.province + ') — ' + co.country + '</span></li>' +
+                '<li>' + ICO.pin + '<span>' + co.street + '<br>' +
+                  (co.locality ? co.locality + '<br>' : '') +
+                  co.zip + ' ' + co.city + ' (' + co.province + ') — ' + co.country +
+                  '</span></li>' +
                 '<li>' + ICO.tel + '<a href="tel:' + co.phoneHref + '">' + co.phone + '</a></li>' +
                 '<li>' + ICO.mail + '<a href="mailto:' + co.email + '">' + co.email + '</a></li>' +
               '</ul>' +
             '</div>' +
           '</div>' +
           '<div class="footer-bar">' +
-            '<p>&copy; ' + year + ' ' + co.legal + ' — ' + t.rights + ' ' +
-              t.vatLabel + ' ' + co.vat + '</p>' +
+            '<p>&copy; ' + year + ' ' + co.legal + ' — ' + t.rights +
+              (co.vat ? ' ' + t.vatLabel + ' ' + co.vat : '') + '</p>' +
             '<div class="footer-bar__links">' +
               '<a href="' + S.url('contact') + '">' + t.fContacts + '</a>' +
               '<span>' + t.credits + '</span>' +

@@ -24,10 +24,10 @@
       email: 'Inserisci un indirizzo email valido.',
       consent: 'Devi acconsentire al trattamento dei dati.',
       subject: 'Richiesta di preventivo dal sito',
-      ok: 'Abbiamo aperto il tuo programma di posta con la richiesta gia compilata: controlla e premi invia. Se non si apre nulla, scrivici direttamente a ',
+      ok: 'Abbiamo aperto il tuo programma di posta con la richiesta già compilata: controlla e premi invia. Se non si apre nulla, scrivici direttamente a ',
       labels: {
         name: 'Nome e cognome', company: 'Azienda', email: 'Email', phone: 'Telefono',
-        sector: 'Settore', quantity: 'Quantita indicativa', message: 'Messaggio'
+        sector: 'Settore', quantity: 'Quantità indicativa', message: 'Messaggio'
       }
     },
     en: {

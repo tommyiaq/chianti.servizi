@@ -6,14 +6,17 @@
    in entrambe le lingue.
 
    ------------------------------------------------------------
-   >>> DA VERIFICARE / SOSTITUIRE (placeholder)
-       - company.phone        numero inventato (000)
-       - company.email        casella da confermare
+   >>> DA COMPLETARE
+       - company.vat          P.IVA mancante: obbligatoria sul sito di
+                              un'azienda italiana. Finche e vuota la riga
+                              non viene mostrata ne in footer ne nei contatti.
+       - company.email        lucioiaq@hotmail.it e provvisoria: sostituire
+                              con la casella aziendale quando esiste
        - company.hours        orari indicativi
-       - company.founded      anno di fondazione
+       - company.founded      anno di fondazione (stimato dai 6 anni di attivita)
        - stats nelle pagine   (vedi README.md)
-   Dati reperiti pubblicamente e gia corretti:
-       - ragione sociale, indirizzo, CAP/citta, P.IVA
+   Dati confermati dall'azienda:
+       - indirizzo, localita, CAP, citta, provincia, cellulare
    ------------------------------------------------------------
    Nessuna dipendenza esterna: semplice oggetto globale.
    ============================================================ */
@@ -25,23 +28,27 @@ window.SITE = (function () {
   var company = {
     name:      'Chianti Servizi',
     legal:     'Chianti Servizi',
-    street:    'Via Rossini, 2',
-    zip:       '53036',
-    city:      'Poggibonsi',
-    province:  'SI',
+    street:    'Via Montebello, 205/A',
+    locality:  'Località Cantone',
+    zip:       '50052',
+    city:      'Certaldo',
+    province:  'FI',
     region:    'Toscana',
     country:   'Italia',
-    vat:       '01415280526',
-    phone:     '+39 0577 000 000',      /* PLACEHOLDER */
-    phoneHref: '+390577000000',         /* PLACEHOLDER */
-    email:     'info@chiantiservizi.it',/* PLACEHOLDER */
-    founded:   1998,                    /* PLACEHOLDER */
-    lat:       43.4686,
-    lng:       11.1474,
-    mapsUrl:   'https://www.openstreetmap.org/?mlat=43.4686&mlon=11.1474#map=16/43.4686/11.1474',
-    mapEmbed:  'https://www.openstreetmap.org/export/embed.html?bbox=11.132%2C43.460%2C11.163%2C43.478&layer=mapnik&marker=43.4686%2C11.1474'
+    vat:       '',                      /* DA INSERIRE: P.IVA (obbligatoria) */
+    phone:     '+39 334 915 6404',
+    phoneHref: '+393349156404',
+    email:     'lucioiaq@hotmail.it',   /* provvisoria, in attesa della casella aziendale */
+    founded:   2020,                    /* PLACEHOLDER */
+    lat:       43.5925,
+    lng:       11.0285,
+    mapsUrl:   'https://www.openstreetmap.org/?mlat=43.5925&mlon=11.0285#map=16/43.5925/11.0285',
+    mapEmbed:  'https://www.openstreetmap.org/export/embed.html?bbox=11.013%2C43.5835%2C11.044%2C43.6015&layer=mapnik&marker=43.5925%2C11.0285'
   };
   company.addressLine = company.street + ', ' + company.zip + ' ' + company.city + ' (' + company.province + ')';
+  /* 'Localita Cantone' va fra via e CAP quando serve l'indirizzo completo */
+  company.addressFull = company.street + ' - ' + company.locality + ', '
+                      + company.zip + ' ' + company.city + ' (' + company.province + ')';
 
   /* ---------- 2. Mappa delle pagine (percorsi relativi alla root) ---------- */
   var pages = {

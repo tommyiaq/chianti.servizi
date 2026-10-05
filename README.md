@@ -90,28 +90,44 @@ se deve comparire nel menu, aggiungerla a `pages` e `navOrder` in `config.js`.
 
 ### 1. Dati aziendali — `assets/js/config.js`
 
-Sono **segnaposto** e vanno confermati:
+**Confermati dall'azienda** e già inseriti in tutto il sito:
+
+- Via Montebello, 205/A — Località Cantone, 50052 Certaldo (FI)
+- Cellulare +39 334 915 6404
+- Coordinate mappa 43.5925 / 11.0285 (geocodifica OpenStreetMap di Via Montebello)
+
+**Ancora da sistemare:**
 
 | dato | valore attuale | nota |
 |------|----------------|------|
-| telefono | `+39 0577 000 000` | inventato, da sostituire |
-| email | `info@chiantiservizi.it` | da confermare |
+| **P.IVA** | *vuota* | **obbligatoria** sul sito di un'azienda italiana: va inserita in `company.vat`. Finché è vuota la riga non compare né nel footer né nei contatti |
+| email | `lucioiaq@hotmail.it` | provvisoria, su indicazione del cliente: sostituire con la casella aziendale quando sarà attiva |
 | orari | Lun–Gio 8–17:30, Ven 8–15 | indicativi |
-| anno di fondazione | 1998 | indicativo |
+| anno di fondazione | 2020 | dedotto dai 6 anni di attività |
 
-Ragione sociale, indirizzo (Via Rossini 2, 53036 Poggibonsi SI) e P.IVA `01415280526`
-provengono da fonti pubbliche: **vanno comunque verificati**, perché l'attività
-registrata a quell'indirizzo risulta operare nella manutenzione del verde e non nel
-confezionamento.
+Telefono, email e indirizzo compaiono anche in chiaro in `contatti.html` e
+`en/contact.html` (scheda recapiti, blocco mappa, nota sotto il form) e nel JSON-LD
+in testa alle due home: se cambia un recapito va aggiornato sia in `config.js` sia lì.
 
-Telefono ed email compaiono anche, in chiaro, in `contatti.html` e `en/contact.html`
-(scheda recapiti e nota sotto il form) e nel blocco JSON-LD in testa alle home.
+> L'indirizzo è in provincia di **Firenze**: l'uscita "Poggibonsi Nord" citata nelle
+> indicazioni stradali è corretta, è il raccordo più vicino sulla Firenze–Siena.
 
 ### 2. Numeri e certificazioni
 
-Sono plausibili ma **non verificati**: 25+ anni, 3.500 m², 180+ marchi, 4 M pezzi/anno
-(sezione "numeri" delle due home), HACCP / ISO 22716 / ISO 9001, lotti minimi e capacità
-produttiva nella pagina Servizi. Da confermare o rimuovere.
+La fascia "numeri" delle due home riporta i dati forniti dall'azienda:
+**6 anni di attività**, **500 m² di stabilimento**, **1 M di pezzi confezionati l'anno**.
+Di conseguenza l'anno di fondazione è il **2020**, e su questo sono allineati il
+sottotitolo dell'hero, il testo di apertura e la cronologia in Chi Siamo.
+
+Restano **da confermare**:
+
+| dato | dove | nota |
+|------|------|------|
+| 180+ marchi serviti | fascia numeri delle home | non confermato; alto per 6 anni di attività |
+| fino a 6.000 pezzi al giorno | tabella in Servizi | stimato per restare coerente con 1 M/anno |
+| lotto minimo 300 / 2.000 pezzi | tabella in Servizi | indicativo |
+| HACCP, ISO 22716, ISO 9001 | home e Chi Siamo | da confermare o rimuovere |
+| tappe 2020 · 2021 · 2023 · 2025 | cronologia in Chi Siamo | date verosimili, da correggere con quelle reali |
 
 ### 3. Immagini
 
